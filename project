@@ -1,0 +1,16 @@
+from random import randint
+
+print("Devine le nombre auquel je pense.")
+nombre_secret = randint(0, 100) + 1
+
+gagne = False
+while not gagne:
+    reponse = int(input("Choisi un nombre entre 1 et 100 inclus: "))
+    if nombre_secret > reponse:
+        print("Le nombre est plus grand")
+    elif nombre_secret < reponse:
+        print("Le nombre est plus petit")
+    else:
+        gagne = True
+
+print("Tu as trouvé le nombre. Bravo!")
